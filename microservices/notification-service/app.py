@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI(title="Notification Service")
+app = FastAPI(
+    title="Notification Service",
+    root_path="/notifications"
+)
 
 class Notification(BaseModel):
     client_name: str

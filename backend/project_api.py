@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-app = FastAPI(title="Autoservice Main API")
+app = FastAPI(
+    title="Autoservice Main API",
+    root_path="/api"
+)
 
 class RequestData(BaseModel):
     client_name: str

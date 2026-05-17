@@ -2,7 +2,10 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 
-app = FastAPI(title="Analytics Service")
+app = FastAPI(
+    title="Analytics Service",
+    root_path="/analytics"
+)
 
 class ServiceRequest(BaseModel):
     id: int
